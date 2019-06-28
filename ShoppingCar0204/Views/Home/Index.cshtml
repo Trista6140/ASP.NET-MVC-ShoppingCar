@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ShoppingCar0204.Models.tProduct>
+@{
+    ViewBag.Title = "產品列表";
+}
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4">
+            <div class="img-rounded">
+                <img src="~/images/@item.fImg" style="width:70%">
+                <div class="caption">
+                    <h2>@item.fName</h2>
+                    <p>單價:@item.fPrice</p>
+                    @if (Session["Member"] == null)
+                    {
+                        <p></p>
+                    }
+                    else
+                    {
+                        <p>
+                            <a href="@Url.Action("AddCar")?fPId=@item.fPId" @*fPId是傳到後端的值*@
+                               class="btn btn-primary">加入購物車</a>
+
+                            @if (@item.fId == 1)
+                            {<a href="https://www.panasonic.com/tw/" target="_blank"
+                                class="btn btn-info">品牌介紹</a>}
+                            else if (@item.fId == 2)
+                            { <a href="http://www.haier.net/cn/" target="_blank"
+                                 class="btn btn-info">品牌介紹</a>
+                            }
+                            else if (@item.fId == 3)
+                            { <a href="https://www.philips.com.tw/" target="_blank"
+                                 class="btn btn-info">品牌介紹</a>
+                            }
+                            else if (@item.fId == 4)
+                            { <a href="https://www.lg.com/tw" target="_blank"
+                                 class="btn btn-info">品牌介紹</a>
+                            }
+                            else if (@item.fId == 5)
+                            { <a href="https://www.sony.com.tw/zh" target="_blank"
+                                 class="btn btn-info">品牌介紹</a>
+                            }
+                            else if (@item.fId == 6)
+                            { <a href="https://www.samsung.com/tw/" target="_blank"
+                                 class="btn btn-info">品牌介紹</a>
+                            }
+
+                            <a href="mailto:dream19900416@gmail.com"
+                               class="btn btn-success">意見回饋</a>
+
+
+                        </p>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+    
+</div>
+
+
