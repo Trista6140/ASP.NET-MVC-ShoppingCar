@@ -41,7 +41,7 @@ namespace ShoppingCar0204.Controllers
 
             }
 
-            Session["Welcome"] = member.fName + "歡迎光臨您好";
+            Session["Welcome"] = member.fName + "Welcome";
             Session["Member"] = member;
 
             return RedirectToAction("Index");
