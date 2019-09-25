@@ -36,7 +36,7 @@ namespace ShoppingCar0204.Controllers
 
             if (member == null)
             {
-                ViewBag.Message = "帳密錯誤，登入失敗";
+                ViewBag.Message = "帳密錯誤，登入失敗!!!";
                 return View();
 
             }
