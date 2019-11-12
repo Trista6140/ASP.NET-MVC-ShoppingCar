@@ -155,7 +155,7 @@ namespace ShoppingCar0204.Controllers
             order.fDate = DateTime.Now;
             db.tOrder.Add(order);
 
-            //同時將購物車商品轉換成訂單明細並存入資料庫中。
+            //同時將購物車商品轉換成訂單明細並存入資料庫中
 
             var carList = db.tOrderDetail
             .Where(m => m.fIsApproved == "否" && m.fUserId == fUserId)
