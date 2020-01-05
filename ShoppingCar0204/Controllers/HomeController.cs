@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using ShoppingCar0204.Models;
 
+/*Written by Trista*/
+
 namespace ShoppingCar0204.Controllers
 {
     public class HomeController : Controller
