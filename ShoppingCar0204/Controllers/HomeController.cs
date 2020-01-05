@@ -85,8 +85,6 @@ namespace ShoppingCar0204.Controllers
 
         }
     
-
-
         //GET:Index/ShoppingCar
         public ActionResult ShoppingCar() /*會員購物車清單*/
         {
@@ -191,7 +189,6 @@ namespace ShoppingCar0204.Controllers
         //GET :Index/Logout
         public ActionResult Logout()
         {
-
             Session.Clear();
             return RedirectToAction("Index");
         }
